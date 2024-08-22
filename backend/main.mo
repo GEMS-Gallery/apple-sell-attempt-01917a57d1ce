@@ -67,11 +67,11 @@ actor {
     if (productStore.size() == 0) {
       let defaultProduct: Product = {
         id = 0;
-        name = "MacBook Pro";
-        description = "The most powerful MacBook Pro ever.";
-        price = 1999;
-        features = ["M1 Pro chip", "16-inch Retina display", "Up to 21 hours battery life"];
-        specs = [("Processor", "M1 Pro"), ("Memory", "16GB"), ("Storage", "512GB SSD")];
+        name = "iPhone Android Edition";
+        description = "Experience the best of both worlds with our iPhone Android Edition.";
+        price = 999;
+        features = ["Android-like interface", "iOS performance", "Customizable home screen", "App drawer"];
+        specs = [("Display", "6.1-inch OLED"), ("Processor", "A15 Bionic"), ("Storage", "128GB"), ("Camera", "Dual 12MP system")];
       };
       productStore.put(0, defaultProduct);
       nextId := 1;
