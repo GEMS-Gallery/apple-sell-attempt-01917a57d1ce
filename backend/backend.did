@@ -1,0 +1,29 @@
+type Result = 
+ variant {
+   err: text;
+   ok;
+ };
+type Product = 
+ record {
+   description: text;
+   features: vec text;
+   id: nat;
+   name: text;
+   price: nat;
+   specs: vec record {
+                text;
+                text;
+              };
+ };
+service : {
+  addProduct: (text, text, nat, vec text, vec record {
+                                                text;
+                                                text;
+                                              }) -> (nat);
+  getAllProducts: () -> (vec Product) query;
+  getProduct: (nat) -> (opt Product) query;
+  updateProduct: (nat, text, text, nat, vec text, vec record {
+                                                        text;
+                                                        text;
+                                                      }) -> (Result);
+}
